@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
     public float rotationSpeed;
-    public Transform Spawn1;
+    public GameObject Player1;
+    public GameObject Spawn1;
     private Transform myTrans;
 
     // object orginal position
@@ -26,9 +27,9 @@ public class PlayerController : MonoBehaviour {
         myRot = myTrans.rotation.eulerAngles;
     }
 
-    void Update()
+    void Awake()
     {
-      
+        Spawn1 = GameObject.FindWithTag("Spawn1");
     }
 
     // Update is called once per frame
@@ -72,7 +73,9 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll) {
         if (coll.gameObject.tag == "OB")
         {
-            Reset();
+            Instantiate(Player1, Spawn1.transform.position, Spawn1.transform.rotation);
+            Destroy(gameObject);
+            //Reset();
         }
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OB
   - Player1
+  - Spawn1
   layers:
   - Default
   - TransparentFX

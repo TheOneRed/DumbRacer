@@ -113,36 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &195208885 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1584570918027388, guid: ab516d0d86c9fe647917f5abec6c45d6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1822467139}
---- !u!61 &195208890
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 195208885}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 3.97}
-    newSize: {x: 8, y: 3.97}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8, y: 3.97}
-  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +250,7 @@ GameObject:
   - component: {fileID: 1481561733}
   m_Layer: 0
   m_Name: Spawn1
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,12 +261,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1481561732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -30, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.008067136, y: -11.000034, z: 0.39433587}
+  m_LocalScale: {x: 0.013445226, y: 0.013412786, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1691478945}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1691478941
 GameObject:
@@ -382,6 +352,7 @@ Transform:
   m_LocalScale: {x: 74.37584, y: 0.9999967, z: 74.55575}
   m_Children:
   - {fileID: 1112883624}
+  - {fileID: 1481561733}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -424,24 +395,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1584570918027388, guid: ab516d0d86c9fe647917f5abec6c45d6, type: 2}
-      propertyPath: m_TagString
-      value: Player1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4110431775763232, guid: ab516d0d86c9fe647917f5abec6c45d6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114701975797809640, guid: ab516d0d86c9fe647917f5abec6c45d6,
-        type: 2}
-      propertyPath: spawn
-      value: 
-      objectReference: {fileID: 1481561733}
     - target: {fileID: 114701975797809640, guid: ab516d0d86c9fe647917f5abec6c45d6,
         type: 2}
       propertyPath: Spawn1
       value: 
-      objectReference: {fileID: 1481561733}
+      objectReference: {fileID: 1481561732}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab516d0d86c9fe647917f5abec6c45d6, type: 2}
   m_IsPrefabParent: 0
