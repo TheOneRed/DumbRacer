@@ -7,6 +7,11 @@ TagManager:
   - OB
   - Player1
   - Spawn1
+  - Player2
+  - Player3
+  - Player4
+  - bp1
+  - Spawn2
   layers:
   - Default
   - TransparentFX
@@ -16,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Bumper
   - 
   - 
   - 
