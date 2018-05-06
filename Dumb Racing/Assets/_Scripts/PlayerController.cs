@@ -34,6 +34,15 @@ public class PlayerController: MonoBehaviour
         getItem = audioSource[6];
     }
 
+    private void Update()
+    {
+        if (Input.GetKey("joystick button 0"))
+        {
+            Debug.Log(Input.GetJoystickNames() + "Controller In");
+         
+        }
+    }
+
     private void Awake()
     {
         spawnScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<SpawnScript>();
@@ -46,6 +55,10 @@ public class PlayerController: MonoBehaviour
 
         if (gameObject.tag == "Player1")
         {
+            Vector3 joyDirection = Vector3.zero;
+            joyDirection.z = Input.GetAxis("Player1Steer");
+            transform.Rotate(joyDirection * -rotationSpeed);
+
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 transform.Rotate(Vector3.forward * -rotationSpeed);
@@ -55,13 +68,13 @@ public class PlayerController: MonoBehaviour
                 transform.Rotate(Vector3.forward * rotationSpeed);
             }
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("joystick 1 button 0"))
             {
                 rb.AddForce(gameObject.transform.up * speed);
                 engMoving.Play();
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("joystick 1 button 1"))
             {
                 rb.AddForce(gameObject.transform.up * -speed);
                 //PlayOneShot(engIdle);
@@ -69,6 +82,10 @@ public class PlayerController: MonoBehaviour
         }
         if (gameObject.tag == "Player2")
         {
+            Vector3 joyDirection = Vector3.zero;
+            joyDirection.z = Input.GetAxis("Player2Steer");
+            transform.Rotate(joyDirection * -rotationSpeed);
+
             if (Input.GetKey(KeyCode.D))
             {
                 transform.Rotate(Vector3.forward * -rotationSpeed);
@@ -78,12 +95,12 @@ public class PlayerController: MonoBehaviour
                 transform.Rotate(Vector3.forward * rotationSpeed);
             }
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey("joystick 2 button 0"))
             {
                 rb.AddForce(gameObject.transform.up * speed);
             }
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) || Input.GetKey("joystick 2 button 1"))
             {
                 rb.AddForce(gameObject.transform.up * -speed);
             }
