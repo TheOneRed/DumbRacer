@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212753185998212962}
   - component: {fileID: 50565590687093198}
   - component: {fileID: 61788832768511792}
+  - component: {fileID: 114998044355198728}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player4
@@ -70,7 +71,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1134305548413964}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c463ead8a801ed94d95bb2c810218a53, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -87,6 +88,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.900001, y: 24}
   m_EdgeRadius: 0
+--- !u!114 &114998044355198728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134305548413964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d57fa25f0ab914599c92fd7cd25aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 35
+  rb: {fileID: 50565590687093198}
+  rotationSpeed: 5
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
+  Player3: {fileID: 0}
+  Player4: {fileID: 1134305548413964}
+  Spawn1: {fileID: 0}
+  Spawn2: {fileID: 0}
+  Spawn3: {fileID: 0}
+  Spawn4: {fileID: 0}
 --- !u!212 &212753185998212962
 SpriteRenderer:
   m_ObjectHideFlags: 1

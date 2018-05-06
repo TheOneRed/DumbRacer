@@ -64,7 +64,7 @@ public class PlayerControllerV2: MonoBehaviour
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 rb.AddForce(gameObject.transform.up * -speed);
-                engIdle.Play();
+                PlayOneShot(engIdle);
             }
         }
         if (gameObject.tag == "Player2")
@@ -122,11 +122,11 @@ public class PlayerControllerV2: MonoBehaviour
         }
 
         // Adding force to simulate collisions of players
-        //if (coll.gameObject.tag == "Player3")
-        //{
-        //    Vector3 direction = (transform.position - coll.transform.position);
-        //    Player3.GetComponent<Rigidbody2D>().AddForce(direction * 20);
-        //}
+        if (coll.gameObject.tag == "Player2")
+        {
+            Vector2 direction = (coll.transform.position - transform.position).normalized;
+            Player2.GetComponent<Rigidbody2D>().AddForce(direction * speed);
+        }
 
     }
 }
