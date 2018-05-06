@@ -18,6 +18,26 @@ public class PlayerControllerV2: MonoBehaviour
     public GameObject Spawn4;
 
     private Transform myTrans;
+    private AudioSource [] audioSource;
+    private AudioSource engMoving;
+    private AudioSource engAccl;
+    private AudioSource engIdle;
+    private AudioSource engBrake;
+    private AudioSource engReverse;
+    private AudioSource getBomb;
+    private AudioSource getItem;
+
+    void Start()
+    {
+        audioSource = gameObject.GetComponents<AudioSource>();
+        engIdle = audioSource[0];
+        engAccl = audioSource[1];
+        engMoving = audioSource[2];
+        engBrake = audioSource[3];
+        engReverse = audioSource[4];
+        getBomb = audioSource[5];
+        getItem = audioSource[6];
+    }
 
 
     // Update is called once per frame
@@ -38,11 +58,13 @@ public class PlayerControllerV2: MonoBehaviour
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 rb.AddForce(gameObject.transform.up * speed);
+                engMoving.Play();
             }
 
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 rb.AddForce(gameObject.transform.up * -speed);
+                engIdle.Play();
             }
         }
         if (gameObject.tag == "Player2")

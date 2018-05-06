@@ -688,6 +688,11 @@ Prefab:
       propertyPath: Spawn4
       value: 
       objectReference: {fileID: 572376976}
+    - target: {fileID: 82243002189039930, guid: ab516d0d86c9fe647917f5abec6c45d6,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab516d0d86c9fe647917f5abec6c45d6, type: 2}
   m_IsPrefabParent: 0
