@@ -12,6 +12,8 @@ TagManager:
   - Player4
   - bp1
   - Spawn2
+  - Spawn3
+  - Spawn4
   layers:
   - Default
   - TransparentFX
